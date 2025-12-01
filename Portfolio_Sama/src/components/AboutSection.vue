@@ -12,22 +12,22 @@
         </h2>
 
         <!-- Two Column Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
           <!-- Left Column: Image -->
-          <div ref="imageContainer" class="opacity-0">
-            <div class="relative w-full aspect-[4/3] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                :src="aboutData.image" 
-                :alt="aboutData.imageAlt" 
+          <div ref="imageContainer" class="opacity-0 w-full flex justify-center">
+            <div class="relative w-full max-w-md aspect-square bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-700">
+              <img
+                :src="aboutData.image"
+                :alt="aboutData.imageAlt"
                 loading="lazy"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover object-center"
               />
             </div>
           </div>
 
           <!-- Right Column: Content -->
-          <div ref="contentContainer" class="space-y-6 opacity-0">
+          <div ref="contentContainer" class="space-y-6 opacity-0 flex flex-col justify-center">
             
             <!-- Subtitle -->
             <p class="text-sm font-semibold tracking-widest uppercase text-primary-600 dark:text-primary-400">

@@ -30,17 +30,18 @@
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 translate-y-8" ref="cta">
-            <a 
-              href="#projects" 
+            <a
+              :href="heroData.cvPath"
+              download="CV_Valence_Odounbourou.pdf"
               class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-primary-600 rounded-xl hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transform hover:-translate-y-1"
             >
               {{ heroData.cta }}
               <svg class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-gray-700 dark:text-white transition-all duration-200 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl hover:bg-gray-50 dark:hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 backdrop-blur-sm"
             >
               Me contacter
