@@ -8,29 +8,48 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Primary blue accent (same for both modes)
         primary: {
-          50: '#F5F3FF',
-          100: '#EDE9FE',
-          200: '#DDD6FE',
-          300: '#C4B5FD',
-          400: '#A78BFA',
-          500: '#8B5CF6',
-          600: '#6C4DFF',
-          700: '#5B21B6',
-          800: '#4C1D95',
-          900: '#3B0764',
-          950: '#2E054E',
+          50: '#EFF6FF',
+          100: '#DBEAFE',
+          200: '#BFDBFE',
+          300: '#93C5FD',
+          400: '#58A6FF',
+          500: '#1F6FEB',
+          600: '#0A57D0',
+          700: '#1E40AF',
+          800: '#1E3A8A',
+          900: '#1E3A8A',
         },
+        // Dark mode backgrounds
         dark: {
-          DEFAULT: '#0A0A0B',
-          lighter: '#121214',
-          card: '#1C1C1F',
-          border: '#27272A',
+          DEFAULT: '#0D1117',      // Background 1
+          lighter: '#161B22',      // Background 2
+          card: '#1C2128',         // Cards
+          border: '#30363D',       // Borders
         },
+        // Light mode backgrounds
+        light: {
+          DEFAULT: '#F8FAFC',      // Background 1
+          card: '#F2F4F7',         // Cards
+          pure: '#FFFFFF',         // Background 2
+        },
+        // Text colors
+        text: {
+          dark: {
+            primary: '#E6EDF3',
+            secondary: '#9DA5B4',
+          },
+          light: {
+            primary: '#1A1A1A',
+            secondary: '#4D4D4D',
+          }
+        },
+        // Accent colors (same for both modes)
         accent: {
-          teal: '#2DD4BF',
-          pink: '#EC4899',
-          blue: '#3B82F6',
+          success: '#2EA043',
+          warning: '#F0883E',
+          info: '#58A6FF',
         }
       },
       fontFamily: {

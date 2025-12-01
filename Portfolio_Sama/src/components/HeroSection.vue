@@ -1,10 +1,10 @@
 <template>
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-dark pt-20">
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-light-DEFAULT dark:bg-dark pt-20">
     <!-- Dynamic Background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-400/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-      <div class="absolute top-0 right-1/4 w-96 h-96 bg-accent-pink/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-accent-teal/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-accent-info/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-accent-success/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
       <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02] dark:opacity-[0.05]"></div>
     </div>
 

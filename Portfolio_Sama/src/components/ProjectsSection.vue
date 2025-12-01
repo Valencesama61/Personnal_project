@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="py-24 bg-white dark:bg-dark-lighter relative">
+  <section id="projects" class="py-24 bg-light-pure dark:bg-dark-lighter relative">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         

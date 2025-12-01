@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="py-24 bg-gray-50 dark:bg-dark relative overflow-hidden">
+  <section id="services" class="py-24 bg-light-DEFAULT dark:bg-dark relative overflow-hidden">
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02] dark:opacity-[0.05]"></div>
     

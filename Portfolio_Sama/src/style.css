@@ -32,11 +32,13 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  @apply bg-gray-50 text-gray-900;
+  background-color: #F8FAFC;
+  color: #1A1A1A;
 }
 
 .dark body {
-  @apply bg-dark text-gray-100;
+  background-color: #0D1117;
+  color: #E6EDF3;
 }
 
 /* Custom Scrollbar */
@@ -128,17 +130,17 @@ img[loading="lazy"] {
 
 /* Better focus states for accessibility */
 :focus-visible {
-  outline: 2px solid #6C4DFF;
+  outline: 2px solid #1F6FEB;
   outline-offset: 2px;
 }
 
 /* Gradient Text Utility */
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent-pink;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-400;
 }
 
 .dark .text-gradient {
-  @apply from-primary-400 to-accent-pink;
+  @apply from-primary-400 to-accent-info;
 }
 
 /* Optimize animations for reduced motion preference */

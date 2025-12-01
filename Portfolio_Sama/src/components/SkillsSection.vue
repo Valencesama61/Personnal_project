@@ -1,5 +1,5 @@
 <template>
-  <section id="skills" class="py-24 bg-gray-50 dark:bg-dark relative overflow-hidden">
+  <section id="skills" class="py-24 bg-light-DEFAULT dark:bg-dark relative overflow-hidden">
     <!-- Background Decoration -->
     <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary-500/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent-teal/5 rounded-full blur-3xl"></div>
