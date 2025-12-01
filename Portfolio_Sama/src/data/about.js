@@ -19,7 +19,7 @@ export const aboutData = reactive({
     // Statistics
     stats: [
         {
-            number: "02+",
+            number: "03+",
             label: "Années d'expérience"
         },
         {

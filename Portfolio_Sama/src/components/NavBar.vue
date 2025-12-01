@@ -17,7 +17,7 @@
             <span class="text-white font-bold text-xl">V</span>
           </div>
           <span class="text-xl font-bold text-gray-900 dark:text-white font-heading tracking-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-            Valence<span class="text-primary-600 dark:text-primary-400">.</span>
+            Valence ODOUNBOUROU<span class="text-primary-600 dark:text-primary-400">.</span>
           </span>
         </div>
 

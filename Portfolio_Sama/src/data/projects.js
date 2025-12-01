@@ -10,56 +10,47 @@ export const projectsData = reactive({
         {
             id: 1,
             name: "TrustR",
-            image: "../assets/images/trust.png",
+            image: "../../public/images/trust.png",
             description: "Une plateforme d'appréciation des produits digitaux pour aider dans la prise de décision d'achat.",
             tags: ["Vue.js", "Laravel", "Mysql"],
             codeLink: "https://github.com/username/ecommerce",
-            demoLink: "https://demo-ecommerce.com"
+            demoLink: "https://sama.agence-fastlane.com"
         },
         {
             id: 2,
             name: "Rotten Movies",
-            image: "https://via.placeholder.com/600x400/FFE5D5/FF8C4D?text=Task+Manager",
-            description: "Application de gestion de tâches avec drag & drop, notifications et collaboration.",
-            tags: ["React", "Firebase", "Tailwind"],
+            image: "../../public/images/Rotten_Movies.png",
+            description: "Application de présentation de films, séries ou animés. Le but est de créer une communauté active autour du cinéma.",
+            tags: ["Next.js", "Tailwind", "MongoDB"],
             codeLink: "https://github.com/username/task-manager",
-            demoLink: "https://demo-tasks.com"
+            demoLink: "https://test-gap-j4ks-qp3lejknz-valencesamas-projects.vercel.app/"
         },
         {
             id: 3,
-            name: "Weather Dashboard",
-            image: "https://via.placeholder.com/600x400/D5F5FF/4D9FFF?text=Weather+App",
-            description: "Dashboard météo avec prévisions, cartes interactives et alertes personnalisées.",
-            tags: ["JavaScript", "API REST", "Chart.js"],
+            name: "LINTRA",
+            image: "../../public/images/Lintra.png",
+            description: "Dashboard de centralisation pour suivre des statistiques sur les applications les plus utilisées par l'utilisateur (météo, youtube...).",
+            tags: ["Nest.js", "React.js"],
             codeLink: "https://github.com/username/weather-dashboard",
-            demoLink: "https://demo-weather.com"
+            demoLink: "https://post-it.agence-fastlane.com"
         },
         {
             id: 4,
-            name: "Portfolio Builder",
+            name: "ShowTime",
             image: "https://via.placeholder.com/600x400/FFD5E5/FF4D8C?text=Portfolio+Builder",
-            description: "Créateur de portfolio en ligne avec templates personnalisables et export.",
-            tags: ["Vue.js", "Tailwind", "Vite"],
+            description: "Application web de gestion de billeterie d'évènement. Effectuez vos réservations ou mettez en favoris vos groupes préférés.",
+            tags: ["Nest.js", "Tailwind", "EJS"],
             codeLink: "https://github.com/username/portfolio-builder",
             demoLink: "https://demo-portfolio.com"
         },
         {
             id: 5,
-            name: "Social Media Dashboard",
+            name: "Rolexion",
             image: "https://via.placeholder.com/600x400/D5FFE5/4DFF8C?text=Social+Dashboard",
-            description: "Dashboard analytique pour réseaux sociaux avec graphiques et statistiques.",
-            tags: ["React", "D3.js", "Express"],
+            description: "Site E-commerce de présentation de bijoux de luxe. Recherchez au meilleur prix les meilleurs bijoux du marchés",
+            tags: ["HTML5", "CSS3", "JavaScript"],
             codeLink: "https://github.com/username/social-dashboard",
-            demoLink: "https://demo-social.com"
+            demoLink: "https://king-kakatsi.github.io/Rolexion"
         },
-        {
-            id: 6,
-            name: "Chat Application",
-            image: "https://via.placeholder.com/600x400/FFF5D5/FFD54D?text=Chat+App",
-            description: "Application de messagerie en temps réel avec rooms et partage de fichiers.",
-            tags: ["Socket.io", "Node.js", "MongoDB"],
-            codeLink: "https://github.com/username/chat-app",
-            demoLink: "https://demo-chat.com"
-        }
     ]
 });

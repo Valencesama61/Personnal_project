@@ -48,17 +48,7 @@
             </a>
           </div>
           
-          <!-- Social Proof / Tech Stack -->
-          <div class="pt-8 opacity-0 translate-y-8" ref="techStack">
-            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium uppercase tracking-wider">Tech Stack</p>
-            <div class="flex flex-wrap justify-center lg:justify-start gap-6 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-              <!-- Icons would go here, using simple text for now or SVGs -->
-              <span class="font-bold text-gray-400 hover:text-[#4FC08D] transition-colors">Vue.js</span>
-              <span class="font-bold text-gray-400 hover:text-[#38B2AC] transition-colors">Tailwind</span>
-              <span class="font-bold text-gray-400 hover:text-[#F7DF1E] transition-colors">JavaScript</span>
-              <span class="font-bold text-gray-400 hover:text-[#61DAFB] transition-colors">React</span>
-            </div>
-          </div>
+          
         </div>
 
         <!-- Image/Illustration -->
