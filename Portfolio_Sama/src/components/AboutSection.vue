@@ -16,7 +16,7 @@
 
           <!-- Left Column: Image -->
           <div ref="imageContainer" class="opacity-0 w-full flex justify-center">
-            <div class="relative w-full max-w-md aspect-square bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-700">
+            <div class="relative w-full max-w-xs sm:max-w-md aspect-square bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-700">
               <img
                 :src="aboutData.image"
                 :alt="aboutData.imageAlt"
@@ -51,7 +51,7 @@
             </div>
 
             <!-- Statistics -->
-            <div class="grid grid-cols-2 gap-6 pt-6">
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 pt-6">
               <div 
                 v-for="(stat, index) in aboutData.stats" 
                 :key="index"

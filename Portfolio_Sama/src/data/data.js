@@ -2,10 +2,10 @@ import { reactive } from 'vue';
 
 export const data = reactive({
     navigation: [
-        { name: 'Home', href: '#hero' },
-        { name: 'About', href: '#about' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#projects' },
+        { name: 'Accueil', href: '#hero' },
+        { name: 'À propos', href: '#about' },
+        { name: 'Compétences', href: '#skills' },
+        { name: 'Projets', href: '#projects' },
         { name: 'Services', href: '#services' },
         { name: 'Contact', href: '#contact' }
     ],

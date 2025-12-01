@@ -8,18 +8,18 @@ import { data } from '../data/data.js';
     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-accent-pink to-primary-500 opacity-50"></div>
     
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
         
         <!-- Brand -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-2 sm:space-x-3">
           <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-pink rounded-lg flex items-center justify-center shadow-md">
             <span class="text-white font-bold text-lg">V</span>
           </div>
-          <span class="text-lg font-bold text-gray-900 dark:text-white font-heading">Valence.</span>
+          <span class="text-base sm:text-lg font-bold text-gray-900 dark:text-white font-heading">Valence.</span>
         </div>
         
         <!-- Copyright -->
-        <p class="text-gray-500 dark:text-gray-400 text-sm">
+        <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm text-center">
           {{ data.footer.text }}
         </p>
         

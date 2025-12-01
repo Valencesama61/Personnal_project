@@ -37,11 +37,11 @@ export const projectsData = reactive({
         {
             id: 4,
             name: "ShowTime",
-            image: "https://via.placeholder.com/600x400/FFD5E5/FF4D8C?text=Portfolio+Builder",
+            image: "images/showtime.png",
             description: "Application web de gestion de billeterie d'évènement. Réservez vos ticket aux divers festivals et mettez en favoris vos groupes préférés.",
             tags: ["Nest.js", "MongoDb", "EJS"],
             codeLink: "https://github.com/username/portfolio-builder",
-            demoLink: "https://demo-portfolio.com"
+            demoLink: "https://show-time-35b9.onrender.com/"
         },
         {
             id: 5,

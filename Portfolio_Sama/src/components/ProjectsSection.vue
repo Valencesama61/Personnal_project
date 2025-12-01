@@ -19,7 +19,7 @@
             v-for="project in visibleProjects"
             :key="project.id"
             :ref="el => setCardRef(el, project.id)"
-            class="group relative h-[400px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 opacity-0"
+            class="group relative h-[350px] sm:h-[400px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 opacity-0"
           >
             <!-- Background Image -->
             <div class="absolute inset-0">

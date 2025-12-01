@@ -12,12 +12,12 @@
       <div class="flex items-center justify-between h-16">
         
         <!-- Logo & Brand -->
-        <div class="flex items-center space-x-3 group cursor-pointer">
+        <div class="flex items-center space-x-2 sm:space-x-3 group cursor-pointer">
           <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-pink rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform duration-300">
             <span class="text-white font-bold text-xl">V</span>
           </div>
-          <span class="text-xl font-bold text-gray-900 dark:text-white font-heading tracking-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-            Valence ODOUNBOUROU<span class="text-primary-600 dark:text-primary-400">.</span>
+          <span class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white font-heading tracking-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+            Valence<span class="hidden sm:inline"> ODOUNBOUROU</span><span class="text-primary-600 dark:text-primary-400">.</span>
           </span>
         </div>
 
