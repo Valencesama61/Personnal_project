@@ -10,8 +10,8 @@ export const servicesData = reactive({
         {
             id: 1,
             icon: "code",
-            title: "Développement Web",
-            description: "Création de sites web modernes et performants avec les dernières technologies (Vue.js, React, Node.js). Des interfaces utilisateur intuitives et responsive."
+            title: "Développement Web & Mobile",
+            description: "Création d'applications web et mobiles modernes et performantes avec les dernières technologies (Vue.js, React, React Native, Node.js). Des interfaces utilisateur intuitives, responsive et adaptées à tous les supports."
         },
         {
             id: 2,
