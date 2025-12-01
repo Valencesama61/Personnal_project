@@ -12,7 +12,7 @@ export const aboutData = reactive({
 
     // Description paragraphs
     paragraphs: [
-        "Je suis un développeur passionné par la création d'expériences web modernes et intuitives. Mon approche combine expertise technique et sensibilité design pour créer des solutions qui font la différence.",
+        "Je suis passionné par la création d'expériences web ou mobile modernes et intuitives. Mon approche combine expertise technique et sensibilité design pour créer des solutions qui font la différence.",
         "Chaque projet est une opportunité d'apprendre, d'innover et de repousser les limites du possible. Je crois en l'importance du détail et de la qualité dans tout ce que je crée."
     ],
 
