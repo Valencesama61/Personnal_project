@@ -10,7 +10,7 @@ export const projectsData = reactive({
         {
             id: 1,
             name: "TrustR",
-            image: "../../public/images/trust.png",
+            image: "/images/trust.png",
             description: "Une plateforme d'appréciation des produits digitaux pour aider dans la prise de décision d'achat.",
             tags: ["Vue.js", "Laravel", "Mysql"],
             codeLink: "https://github.com/username/ecommerce",
@@ -19,7 +19,7 @@ export const projectsData = reactive({
         {
             id: 2,
             name: "Rotten Movies",
-            image: "../../public/images/Rotten_Movies.png",
+            image: "/images/Rotten_Movies.png",
             description: "Application de présentation de films, séries ou animés. Le but est de créer une communauté active autour du cinéma.",
             tags: ["Next.js", "Tailwind", "MongoDB"],
             codeLink: "https://github.com/username/task-manager",
@@ -28,7 +28,7 @@ export const projectsData = reactive({
         {
             id: 3,
             name: "LINTRA",
-            image: "../../public/images/Lintra.png",
+            image: "/images/Lintra.png",
             description: "Dashboard de centralisation pour suivre des statistiques sur les applications les plus utilisées par l'utilisateur (météo, youtube...).",
             tags: ["Nest.js", "React.js"],
             codeLink: "https://github.com/username/weather-dashboard",
