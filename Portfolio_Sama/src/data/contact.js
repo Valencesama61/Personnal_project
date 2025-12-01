@@ -7,9 +7,9 @@ export const contactData = reactive({
 
     // Contact information
     contactInfo: {
-        email: "hello@example.com",
-        phone: "+33 6 00 00 00 00",
-        location: "Paris, France"
+        email: "valence.odounbourou@epitech.eu",
+        phone: "+229 01 61405056",
+        location: "Cotonou, Bénin"
     },
 
     // Form configuration

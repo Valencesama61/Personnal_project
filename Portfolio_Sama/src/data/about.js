@@ -7,7 +7,7 @@ export const aboutData = reactive({
     heading: "Passionné par le code et le design",
 
     // Image
-    image: "/images/Val.png",
+    image: "/images/profile.png",
     imageAlt: "Photo de profil",
 
     // Description paragraphs
@@ -19,7 +19,7 @@ export const aboutData = reactive({
     // Statistics
     stats: [
         {
-            number: "02+",
+            number: "03+",
             label: "Années d'expérience"
         },
         {
