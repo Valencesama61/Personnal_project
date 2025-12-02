@@ -7,7 +7,7 @@ export const aboutData = reactive({
     heading: "Passionné par le code et le design",
 
     // Image
-    image: "/images/profile.png",
+    image: "/images/heroImage.png",
     imageAlt: "Photo de profil",
 
     // Description paragraphs

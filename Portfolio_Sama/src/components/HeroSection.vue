@@ -8,8 +8,8 @@
       <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02] dark:opacity-[0.05]"></div>
     </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
         
         <!-- Text Content -->
         <div class="space-y-8 text-center lg:text-left" ref="textContainer">
@@ -53,12 +53,12 @@
 
         <!-- Image/Illustration -->
         <div class="relative lg:h-full flex justify-center lg:justify-end items-center perspective-1000 mt-8 lg:mt-0" ref="imageContainer">
-          <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-xl aspect-square opacity-0 scale-95 group" ref="image">
+          <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg aspect-square opacity-0 scale-95 group" ref="image">
             <!-- Glass Card Effect Behind -->
             <div class="absolute inset-0 bg-gradient-to-tr from-primary-600 to-accent-pink rounded-[2rem] rotate-6 opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
             
             <!-- Main Image Container -->
-            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/20 dark:border-white/10 bg-white/10 backdrop-blur-sm transform transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
+            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-gray-800 bg-gray-900 transform transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
               <img 
                 :src="heroData.image" 
                 alt="Hero Illustration" 
