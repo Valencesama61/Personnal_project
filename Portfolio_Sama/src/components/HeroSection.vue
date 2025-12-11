@@ -15,7 +15,7 @@
         <div class="space-y-8 text-center lg:text-left" ref="textContainer">
           <div class="space-y-4">
             <div class="inline-block px-4 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-semibold tracking-wide uppercase mb-4 opacity-0 translate-y-4" ref="badge">
-              👋 Bienvenue sur mon portfolio
+               Bienvenue sur mon portfolio
             </div>
             
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white opacity-0 translate-y-8 font-heading leading-tight" ref="title">
