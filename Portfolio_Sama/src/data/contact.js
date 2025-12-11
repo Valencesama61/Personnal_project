@@ -25,8 +25,8 @@ export const contactData = reactive({
 
     // EmailJS configuration (à configurer avec vos propres clés)
     emailJS: {
-        serviceId: "YOUR_SERVICE_ID",
-        templateId: "YOUR_TEMPLATE_ID",
-        publicKey: "YOUR_PUBLIC_KEY"
+        serviceId: "service_zaylgm6",
+        templateId: "template_xmf9rf3",
+        publicKey: "ndVUXJM-qXZnoOLwM"
     }
 });

@@ -193,6 +193,7 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue';
 import { animate, inView } from 'motion';
+import emailjs from '@emailjs/browser';
 import { contactData } from '../data/contact.js';
 
 // Refs for animation targets
@@ -221,22 +222,17 @@ const handleSubmit = async () => {
   formState.showError = false;
 
   try {
-    // Simulate API call (replace with actual EmailJS integration)
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // TODO: Integrate with EmailJS
-    // Example EmailJS integration:
-    // import emailjs from '@emailjs/browser';
-    // await emailjs.send(
-    //   contactData.emailJS.serviceId,
-    //   contactData.emailJS.templateId,
-    //   {
-    //     from_name: formData.name,
-    //     from_email: formData.email,
-    //     message: formData.message
-    //   },
-    //   contactData.emailJS.publicKey
-    // );
+    await emailjs.send(
+      contactData.emailJS.serviceId,
+      contactData.emailJS.templateId,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'valenceodounbourou@gmail.com'
+      },
+      contactData.emailJS.publicKey
+    );
 
     // Show success message
     formState.showSuccess = true;
