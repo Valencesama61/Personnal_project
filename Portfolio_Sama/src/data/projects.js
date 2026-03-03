@@ -10,7 +10,7 @@ export const projectsData = reactive({
         {
             id: 1,
             name: "TrustR",
-            image: "images/trust.png",
+            image: "images/trust.webp",
             description: "Une plateforme d'appréciation des produits digitaux pour aider dans la prise de décision d'achat.",
             tags: ["Vue.js", "Laravel", "Mysql"],
             codeLink: "https://github.com/username/ecommerce",
@@ -19,7 +19,7 @@ export const projectsData = reactive({
         {
             id: 2,
             name: "Rotten Movies",
-            image: "images/Rotten_Movies.png",
+            image: "images/Rotten_Movies.webp",
             description: "Application de gestion de tâches avec drag & drop, notifications et collaboration.",
             tags: ["Next.js", "MongoDb", "Tailwind"],
             codeLink: "https://github.com/username/task-manager",
@@ -28,7 +28,7 @@ export const projectsData = reactive({
         {
             id: 3,
             name: "LINTRA",
-            image: "images/Lintra_1.png",
+            image: "images/Lintra_1.webp",
             description: "un dashboard qui vous permet de centraliser les statistiques de vos évènements de divers plateformes sur une seule interface.",
             tags: ["Nest.js", "React.js"],
             codeLink: "https://github.com/username/weather-dashboard",
@@ -37,7 +37,7 @@ export const projectsData = reactive({
         {
             id: 4,
             name: "ShowTime",
-            image: "images/showtime.png",
+            image: "images/showtime.webp",
             description: "Application web de gestion de billeterie d'évènement. Réservez vos ticket aux divers festivals et mettez en favoris vos groupes préférés.",
             tags: ["Nest.js", "MongoDb", "EJS"],
             codeLink: "https://github.com/username/portfolio-builder",
@@ -46,7 +46,7 @@ export const projectsData = reactive({
         {
             id: 5,
             name: "Rolexion",
-            image: "images/Rolexion.png",
+            image: "images/Rolexion.webp",
             description: "Site Vitrine de présentation d'articles et bijoux de luxe. Consultez les meilleurs bijoux au meilleurs prix.",
             tags: ["HTML5", "CSS3", "JavaScript"],
             codeLink: "https://github.com/username/social-dashboard",
