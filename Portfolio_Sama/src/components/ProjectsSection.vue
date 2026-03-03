@@ -44,7 +44,19 @@
             @scroll="checkScrollPosition"
             class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 hide-scrollbar"
           >
+            <!-- Loading skeletons -->
+            <template v-if="isLoading">
+              <div
+                v-for="n in 3"
+                :key="'skeleton-' + n"
+                class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center"
+              >
+                <div class="h-[400px] rounded-3xl bg-gray-200 dark:bg-dark-card animate-pulse"></div>
+              </div>
+            </template>
+            <!-- Projects cards -->
             <div
+              v-if="!isLoading"
               v-for="project in projectsData.projects"
               :key="project.id"
               class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center"
@@ -123,14 +135,41 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
 import { animate, inView } from 'motion';
-import { projectsData } from '../data/projects.js';
+import { supabase } from '../lib/supabase.js';
 
 const headerContainer = ref(null);
 const scrollContainer = ref(null);
 const isAtStart = ref(true);
 const isAtEnd = ref(false);
+const isLoading = ref(true);
+
+const projectsData = reactive({
+  sectionTitle: "Projets",
+  subtitle: "MES RÉALISATIONS",
+  projects: []
+});
+
+const fetchProjects = async () => {
+  const { data, error } = await supabase
+    .from('projects')
+    .select('*')
+    .order('created_at', { ascending: true });
+
+  if (!error && data) {
+    projectsData.projects = data.map(p => ({
+      id: p.id,
+      name: p.name,
+      description: p.description,
+      image: p.image,
+      tags: p.tags ?? [],
+      codeLink: p.code_link,
+      demoLink: p.demo_link
+    }));
+  }
+  isLoading.value = false;
+};
 
 const checkScrollPosition = () => {
   if (!scrollContainer.value) return;
@@ -152,8 +191,9 @@ const scroll = (direction) => {
   });
 };
 
-onMounted(() => {
-  // Animate header on scroll into view
+onMounted(async () => {
+  await fetchProjects();
+
   inView(headerContainer.value, () => {
     animate(
       headerContainer.value,
@@ -162,7 +202,6 @@ onMounted(() => {
     );
   });
 
-  // Initial check
   checkScrollPosition();
 });
 </script>
