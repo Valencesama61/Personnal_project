@@ -9,7 +9,15 @@
           <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Portfolio Admin</p>
         </div>
 
-        <form @submit.prevent="login">
+        <!-- Locked out -->
+        <div v-if="isLockedOut" class="text-center">
+          <p class="text-red-600 dark:text-red-400 font-semibold text-sm">Trop de tentatives.</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">
+            Réessayez dans <span class="font-bold text-gray-700 dark:text-gray-200">{{ lockoutCountdown }}</span>
+          </p>
+        </div>
+
+        <form v-else @submit.prevent="login">
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Mot de passe
           </label>
@@ -17,12 +25,17 @@
             v-model="passwordInput"
             type="password"
             placeholder="••••••••"
-            class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition"
+            :disabled="isLockedOut"
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition disabled:opacity-50"
           />
-          <p v-if="loginError" class="text-red-500 text-sm mt-2">Mot de passe incorrect.</p>
+          <p v-if="loginError" class="text-red-500 text-sm mt-2">
+            Mot de passe incorrect.
+            <span class="text-gray-400">({{ remainingAttempts }} tentative(s) restante(s))</span>
+          </p>
           <button
             type="submit"
-            class="mt-4 w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-semibold transition"
+            :disabled="isLockedOut"
+            class="mt-4 w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 disabled:opacity-50 text-white font-semibold transition"
           >
             Se connecter
           </button>
@@ -283,7 +296,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { supabase } from '../lib/supabase.js';
 
 // ── AUTH ──────────────────────────────────────────────────────
@@ -292,14 +305,68 @@ const isAuthenticated = ref(sessionStorage.getItem('admin_auth') === 'true');
 const passwordInput = ref('');
 const loginError = ref(false);
 
+// ── RATE LIMITING ─────────────────────────────────────────────
+const MAX_ATTEMPTS = 5;
+const LOCKOUT_DURATION_MS = 15 * 60 * 1000; // 15 minutes
+
+const getAttemptData = () => JSON.parse(localStorage.getItem('admin_attempts') || '{"count":0,"lockedUntil":null}');
+const saveAttemptData = (data) => localStorage.setItem('admin_attempts', JSON.stringify(data));
+
+const isLockedOut = ref(false);
+const lockoutCountdown = ref('');
+const remainingAttempts = computed(() => MAX_ATTEMPTS - getAttemptData().count);
+
+let countdownInterval = null;
+
+const updateLockoutState = () => {
+  const { lockedUntil } = getAttemptData();
+  if (!lockedUntil) { isLockedOut.value = false; return; }
+
+  const remaining = lockedUntil - Date.now();
+  if (remaining <= 0) {
+    localStorage.removeItem('admin_attempts');
+    isLockedOut.value = false;
+    lockoutCountdown.value = '';
+    clearInterval(countdownInterval);
+  } else {
+    isLockedOut.value = true;
+    const m = Math.floor(remaining / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    lockoutCountdown.value = `${m}m ${String(s).padStart(2, '0')}s`;
+  }
+};
+
+const startCountdown = () => {
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(updateLockoutState, 1000);
+};
+
 const login = () => {
+  const data = getAttemptData();
+
+  if (data.lockedUntil && Date.now() < data.lockedUntil) {
+    isLockedOut.value = true;
+    return;
+  }
+
   if (passwordInput.value === ADMIN_PASSWORD) {
+    localStorage.removeItem('admin_attempts');
     isAuthenticated.value = true;
     sessionStorage.setItem('admin_auth', 'true');
     loginError.value = false;
+    clearInterval(countdownInterval);
     fetchProjects();
   } else {
+    const newCount = (data.count || 0) + 1;
+    if (newCount >= MAX_ATTEMPTS) {
+      saveAttemptData({ count: newCount, lockedUntil: Date.now() + LOCKOUT_DURATION_MS });
+      isLockedOut.value = true;
+      startCountdown();
+    } else {
+      saveAttemptData({ count: newCount, lockedUntil: null });
+    }
     loginError.value = true;
+    passwordInput.value = '';
   }
 };
 
@@ -308,6 +375,8 @@ const logout = () => {
   isAuthenticated.value = false;
   passwordInput.value = '';
 };
+
+onUnmounted(() => clearInterval(countdownInterval));
 
 // ── DATA ──────────────────────────────────────────────────────
 const projects = ref([]);
@@ -418,6 +487,8 @@ const confirmDelete = async () => {
 
 // ── INIT ──────────────────────────────────────────────────────
 onMounted(() => {
+  updateLockoutState();
+  if (isLockedOut.value) startCountdown();
   if (isAuthenticated.value) fetchProjects();
 });
 </script>
