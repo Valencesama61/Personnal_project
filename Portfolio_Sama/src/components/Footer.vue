@@ -1,5 +1,7 @@
 <script setup>
 import { data } from '../data/data.js';
+
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
@@ -20,7 +22,7 @@ import { data } from '../data/data.js';
         
         <!-- Copyright -->
         <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm text-center">
-          {{ data.footer.text }}
+          &copy; {{ currentYear }} Valence Sama. Tous droits réservés.
         </p>
         
         <!-- Social Links -->
