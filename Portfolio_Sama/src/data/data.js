@@ -55,8 +55,8 @@ export const data = reactive({
     ],
     contact: {
         email: "valence.odounbourou@epitech.eu",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com"
+        github: "https://github.com/Valencesama61",
+        linkedin: "https://www.linkedin.com/in/valence-odounbourou-62754b216/"
     },
     footer: {
         text: "© 2025 Valence Sama. Tous droits reservés."
