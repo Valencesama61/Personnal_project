@@ -117,6 +117,28 @@ npm run preview
 
 ---
 
+## Keep-Alive Supabase (GitHub Actions)
+
+Pour eviter que Supabase mette le projet en pause apres 7 jours sans activite, un workflow planifie est disponible:
+
+- **Fichier**: `.github/workflows/supabase-keepalive.yml`
+- **Frequence**: toutes les 5 jours (`0 8 */5 * *`, UTC)
+- **Action**: envoie un ping REST a Supabase sur une table publique (par defaut `projects`)
+
+### Configuration GitHub
+
+Dans **GitHub > Settings > Secrets and variables > Actions**:
+
+1. Ajouter le secret `SUPABASE_URL` (ex: `https://xxxx.supabase.co`)
+2. Ajouter le secret `SUPABASE_ANON_KEY`
+3. (Optionnel) Ajouter la variable `SUPABASE_KEEPALIVE_TABLE` si tu veux pinger une autre table que `projects`
+
+### Test Manuel
+
+Tu peux lancer le workflow a la main via l'onglet **Actions** avec `workflow_dispatch` pour verifier tout de suite qu'il repond en `2xx`.
+
+---
+
 ## Personnalisation
 
 ### Modifier le Contenu
