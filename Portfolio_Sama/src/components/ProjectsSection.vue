@@ -18,7 +18,7 @@
           <!-- Navigation Buttons -->
           <button 
             @click="scroll('left')"
-            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-20 p-3 rounded-full bg-white dark:bg-dark-card shadow-lg text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed"
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-20 p-3 rounded-full bg-white dark:bg-dark-card shadow-sm text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed"
             :disabled="isAtStart"
             aria-label="Previous projects"
           >
@@ -29,7 +29,7 @@
 
           <button 
             @click="scroll('right')"
-            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-20 p-3 rounded-full bg-white dark:bg-dark-card shadow-lg text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed"
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-20 p-3 rounded-full bg-white dark:bg-dark-card shadow-sm text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-all duration-300 opacity-0 group-hover/carousel:opacity-100 focus:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed"
             :disabled="isAtEnd"
             aria-label="Next projects"
           >
@@ -61,7 +61,7 @@
               :key="project.id"
               class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-center"
             >
-              <div class="group relative h-[400px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-100 dark:bg-dark-card">
+              <div class="group relative h-[400px] rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 bg-gray-100 dark:bg-dark-card">
                 <!-- Background Image -->
                 <div class="absolute inset-0">
                   <img 
@@ -98,8 +98,9 @@
                   </p>
 
                   <!-- Links -->
-                  <div class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 translate-y-4 group-hover:translate-y-0">
+                  <div v-if="project.demoLink || project.codeLink" class="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 translate-y-4 group-hover:translate-y-0">
                     <a
+                      v-if="project.demoLink"
                       :href="project.demoLink"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -112,6 +113,7 @@
                       Demo
                     </a>
                     <a
+                      v-if="project.codeLink"
                       :href="project.codeLink"
                       target="_blank"
                       rel="noopener noreferrer"

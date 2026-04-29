@@ -33,7 +33,7 @@
             <a
               :href="heroData.cvPath"
               download="CV_Valence_Odounbourou.pdf"
-              class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-primary-600 rounded-xl hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transform hover:-translate-y-1"
+              class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-200 bg-primary-600 rounded-xl hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 shadow-sm transform hover:-translate-y-1"
             >
               {{ heroData.cta }}
               <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@
             <div class="absolute inset-0 bg-gradient-to-tr from-primary-600 to-accent-pink rounded-[2rem] rotate-6 opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
             
             <!-- Main Image Container -->
-            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-gray-800 bg-gray-900 transform transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
+            <div class="relative rounded-[2rem] overflow-hidden shadow-lg border border-gray-800 bg-gray-900 transform transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
               <img 
                 :src="heroData.image" 
                 alt="Hero Illustration" 
@@ -67,7 +67,7 @@
               />
               
               <!-- Floating Badge -->
-              <div class="absolute bottom-8 left-8 glass px-6 py-4 rounded-2xl animate-float shadow-lg">
+              <div class="absolute bottom-8 left-8 glass px-6 py-4 rounded-2xl animate-float shadow-sm">
                 <div class="flex items-center gap-3">
                   <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                   <span class="text-sm font-bold text-gray-800 dark:text-white">Disponible pour projets</span>

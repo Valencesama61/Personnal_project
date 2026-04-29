@@ -16,7 +16,7 @@
 
           <!-- Left Column: Image -->
           <div ref="imageContainer" class="opacity-0 w-full flex justify-center">
-            <div class="relative w-full max-w-xs sm:max-w-md aspect-square bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-700">
+            <div class="relative w-full max-w-xs sm:max-w-md aspect-square bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md border-4 border-white dark:border-gray-700">
               <img
                 :src="aboutData.image"
                 :alt="aboutData.imageAlt"

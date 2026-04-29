@@ -4,7 +4,7 @@
     class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl transition-all duration-300 rounded-2xl border border-transparent"
     :class="[
       scrolled 
-        ? 'glass shadow-lg border-white/20 dark:border-white/10' 
+        ? 'glass shadow-sm border-white/20 dark:border-white/10'
         : 'bg-transparent'
     ]"
   >
@@ -13,7 +13,7 @@
         
         <!-- Logo & Brand -->
         <div class="flex items-center space-x-2 sm:space-x-3 group cursor-pointer">
-          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-pink rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-6 transition-transform duration-300">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-pink rounded-xl flex items-center justify-center shadow-sm transform group-hover:rotate-6 transition-transform duration-300">
             <span class="text-white font-bold text-xl">V</span>
           </div>
           <span class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white font-heading tracking-tight group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
@@ -70,7 +70,7 @@
     <div
       v-if="isMobileMenuOpen"
       ref="mobileMenu"
-      class="md:hidden absolute top-full left-0 right-0 mt-2 mx-auto w-full bg-white/90 dark:bg-dark-card/90 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl shadow-xl overflow-hidden"
+      class="md:hidden absolute top-full left-0 right-0 mt-2 mx-auto w-full bg-white/90 dark:bg-dark-card/90 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl shadow-md overflow-hidden"
     >
       <div class="px-4 py-3 space-y-1">
         <a

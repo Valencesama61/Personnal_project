@@ -14,7 +14,7 @@ const currentYear = new Date().getFullYear();
         
         <!-- Brand -->
         <div class="flex items-center space-x-2 sm:space-x-3">
-          <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center shadow-md">
+          <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center shadow-sm">
             <span class="text-white font-bold text-lg">V</span>
           </div>
           <span class="text-base sm:text-lg font-bold text-gray-900 dark:text-white font-heading">Valence.</span>

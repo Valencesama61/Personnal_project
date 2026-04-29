@@ -81,7 +81,7 @@
 
           <!-- Right Column: Contact Form -->
           <div ref="formContainer" class="opacity-0">
-            <div class="bg-white dark:bg-dark-card p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-white/5 relative overflow-hidden">
+            <div class="bg-white dark:bg-dark-card p-6 sm:p-8 rounded-3xl shadow-md border border-gray-100 dark:border-white/5 relative overflow-hidden">
               <!-- Decorative Gradient -->
               <div class="absolute top-0 right-0 w-32 h-32 bg-primary-500/10 rounded-full blur-2xl -mr-16 -mt-16 pointer-events-none"></div>
 
@@ -139,7 +139,7 @@
                 <button
                   type="submit"
                   :disabled="formState.isSubmitting"
-                  class="w-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white font-bold rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-200 transform hover:-translate-y-1 shadow-lg shadow-primary-500/30"
+                  class="w-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white font-bold rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-200 transform hover:-translate-y-1 shadow-sm"
                 >
                   <span v-if="formState.isSubmitting" class="flex items-center justify-center gap-2">
                     <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

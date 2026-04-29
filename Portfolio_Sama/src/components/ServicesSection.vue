@@ -22,7 +22,7 @@
             v-for="(service, index) in servicesData.services"
             :key="service.id"
             :ref="el => { if (el) serviceCards[index] = el }"
-            class="group relative p-8 rounded-3xl bg-white dark:bg-dark-card border border-gray-100 dark:border-white/5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 opacity-0"
+            class="group relative p-8 rounded-3xl bg-white dark:bg-dark-card border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2 opacity-0"
           >
             <!-- Hover Gradient Border -->
             <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-500/20 to-accent-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
