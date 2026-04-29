@@ -14,7 +14,7 @@ export const data = reactive({
         subtitle: "Développeur web Full Stack",
         description: "Je conçois des solutions web ou mobile modern.",
         cta: "Télécharger mon CV",
-        cvPath: "/cv/valence_odounbourou_développeur_fullstack.pdf",
+        cvPath: "/cv/valence_odounbourou_dev_fullstack.pdf",
         image: "/images/profile.webp"
     },
     about: {
